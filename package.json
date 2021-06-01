@@ -1,0 +1,9 @@
+{
+  "name": "TDD-by-Example",
+  "version": "1.0.0",
+  "description": "Practice TDD from the book \"Test Driven Development By Example\" - Kent Beck.",
+  "main": "index.js",
+  "repository": "git@github.com:tridunghonhan/tddmind.git",
+  "author": "Kenny Ho ",
+  "license": "MIT"
+}
