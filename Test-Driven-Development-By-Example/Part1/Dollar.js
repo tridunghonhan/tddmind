@@ -1,14 +1,7 @@
-module.exports = class Dollar{
+let Money = require('./Money');
+
+module.exports = class Dollar extends Money{
     constructor(amount){
-        this.amount = amount;
+        super(amount)
     }
-
-    times(muliplier){
-        return new Dollar(this.amount * muliplier)
-    }
-
-    equals(dollar){
-        return this.amount === dollar.amount;
-    }
-
 }
