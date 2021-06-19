@@ -1,5 +1,6 @@
 const Dollar = require('./Dollar')
-const Franc = require('./Franc')
+const Franc = require('./Franc');
+const Money = require('./Money');
 
 test('5 dollars * 2 equal 10', () => {
     let five = new Dollar(5);
@@ -25,12 +26,15 @@ test('Chapter 4: Privacy. Test multiplication', ()=>{
 
 test('Chapter 5: Franc-ly speaking.', ()=>{
     let five = new Franc(5);
-    expect(new Franc(10)).toEqual(five.times(2))
-    expect(new Franc(15)).toEqual(five.times(3))
-
     expect(new Franc(2)).toEqual(new Franc(2))
     expect(new Franc(3)).not.toEqual(new Franc(2))
-
-
 })
 
+test('Chapter 6: Equality for all, Redix.', ()=>{
+    expect(new Franc(3).equals(new Dollar(3))).toBe(false)
+})
+
+test.only('Chapter 7: Making objects', ()=>{
+    let fiveDollars = Money.dollar(5)
+    expect(new Dollar(15)).toEqual(fiveDollars.times(3))
+})
